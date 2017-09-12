@@ -7,12 +7,8 @@ public:
 public:
 	cal();
 	~cal();
+	void cal_add();
+	void cal_sub();
+	void cal_mul();
+	void cal_div();
 };
-cal::cal()
-{
-}
-
-
-cal::~cal()
-{
-}
