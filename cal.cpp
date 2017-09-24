@@ -1,10 +1,11 @@
+#include "stdafx.h"
 #include "cal.h"
 #include<iostream>
 
 using namespace std;
 
 
-int temp;
+float temp;
 cal::cal()
 {
 }
@@ -14,7 +15,7 @@ cal::~cal()
 {
 }
 
-void cal :: cal_add()
+void cal ::cn_cal_add()
 {
 	cout << "加法" << endl;
 	cout << p << "+" << q << "=";
@@ -33,7 +34,7 @@ void cal :: cal_add()
 	}
 			
 }
-void cal::cal_div()
+void cal ::cn_cal_sub()
 {
 	cout << "减法" << endl;
 	if (p <  q)
@@ -57,7 +58,7 @@ void cal::cal_div()
 		 
 	}
 }
-void cal::cal_mul()
+void cal ::cn_cal_mul()
 {
 	cout << "乘法" << endl;
 	cout <<  p << "*" <<  q << "=";
@@ -75,7 +76,7 @@ void cal::cal_mul()
 		 
 	}
 }
-void cal::cal_sub()
+void cal ::cn_cal_div()
 {
 	cout << "除法" << endl;
 	if ( q == 0)
@@ -99,3 +100,169 @@ void cal::cal_sub()
 		
 	}
 }
+void cal ::en_cal_add()
+{
+	cout << "Addition" << endl;
+	cout << p << "+" << q << "=";
+	cin >> qans;
+	ans = p + q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "Congratulations on your right,score:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "It's a pity,you are wrong,score:" << score << endl;
+
+	}
+}
+void cal::en_cal_sub() 
+{
+	cout << "Subtraction" << endl;
+	if (p <  q)
+	{
+		temp = q;
+		q = p;
+		p = temp;
+	}
+	cout << p << "-" << q << "=";
+	cin >> qans;
+	ans = p - q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "Congratulations on your right,score:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "It's a pity,you are wrong,score:" << score << endl;
+
+	}
+}
+void cal::en_cal_mul() {
+	cout << "Multiplication" << endl;
+	cout << p << "*" << q << "=";
+	cin >> qans;
+	ans = p *  q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "Congratulations on your right,score:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "It's a pity,you are wrong,score:" << score << endl;
+
+	}
+}
+void cal::en_cal_div()
+{
+	cout << "Division" << endl;
+	if (q == 0)
+	{
+		temp = q;
+		q = p;
+		p = temp;
+	}
+	cout << p << "/" << q << "=";
+	cin >> qans;
+	ans = p / q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "Congratulations on your right,score:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "It's a pity,you are wrong,score:" << score << endl;
+	}
+}
+void cal::jp_cal_add() 
+{
+	cout << "足す" << endl;
+	cout << p << "+" << q << "=";
+	cin >> qans;
+	ans = p + q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "おめでとうございます,正解だった,点数:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "残念ながら,間違った,点数:" << score << endl;
+
+	}
+}
+void cal::jp_cal_sub() 
+{
+	cout << "引く" << endl;
+	if (p <  q)
+	{
+		temp = q;
+		q = p;
+		p = temp;
+	}
+	cout << p << "-" << q << "=";
+	cin >> qans;
+	ans = p - q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "おめでとうございます,正解だった,点数:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "残念ながら,間違った,点数:" << score << endl;
+	}
+}
+void cal::jp_cal_mul() 
+{
+	cout << "挂ける" << endl;
+	cout << p << "*" << q << "=";
+	cin >> qans;
+	ans = p *  q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "おめでとうございます,正解だった,点数:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "残念ながら,間違った,点数:" << score << endl;
+
+	}
+}
+void cal::jp_cal_div() 
+{
+	cout << "割る" << endl;
+	if (q == 0)
+	{
+		temp = q;
+		q = p;
+		p = temp;
+	}
+	cout << p << "/" << q << "=";
+	cin >> qans;
+	ans = p / q;
+	if (ans == qans)
+	{
+		score = score + 5;
+		cout << "おめでとうございます,正解だった,点数:" << score << endl;
+
+	}
+	else {
+		score = score - 3;
+		cout << "残念ながら,間違った,点数:" << score << endl;
+	}
+}
+
+
