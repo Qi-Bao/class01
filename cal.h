@@ -7,8 +7,16 @@ public:
 public:
 	cal();
 	~cal();
-	void cal_add();
-	void cal_sub();
-	void cal_mul();
-	void cal_div();
+	void en_cal_add();
+	void en_cal_sub();
+	void en_cal_mul();
+	void en_cal_div();
+	void cn_cal_add();
+	void cn_cal_sub();
+	void cn_cal_mul();
+	void cn_cal_div();
+	void jp_cal_add();
+	void jp_cal_sub();
+	void jp_cal_mul();
+	void jp_cal_div();
 };
